@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPTEL Certificate</title>
+    <style>
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        .btn {
+            color: white;
+            background-color: #3070bf;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            width: 170px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            background-color: #2460aa;
+        }
+
+        #pdfViewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="openPDF()" class="btn">Course Certificate</button>
+    </div>
+    <iframe id="pdfViewer" frameborder="0"></iframe>
+
+    <script>
+        function openPDF() {
+            const pdfViewer = document.getElementById('pdfViewer');
+            pdfViewer.style.display = 'block';
+            pdfViewer.src = './NPTEL Course Material.pdf';
+        }
+    </script>
+</body>
+</html>
